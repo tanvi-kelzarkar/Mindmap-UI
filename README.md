@@ -67,3 +67,10 @@ The application follows a component-based architecture:
 ![Selected](screenshots/selected.png)
 ![Collapse](screenshots/collapse.png)
 ![Expand](screenshots/Expand.png)
+
+---
+
+## How to Run the Project
+```bash
+npm install
+npm start
