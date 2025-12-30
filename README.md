@@ -57,3 +57,13 @@ The application follows a component-based architecture:
 - Fit view functionality
 - Detailed side panel for selected nodes
 - Clean and responsive UI
+
+---
+
+## Screenshots
+![Mindmap](screenshots/mindmap-light.png)
+![Mindmap](screenshots/mindmap-dark.png)
+![Hover](screenshots/Hover.png)
+![Selected](screenshots/selected.png)
+![Collapse](screenshots/collapse.png)
+![Expand](screenshots/Expand.png)
