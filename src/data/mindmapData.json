@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "projectName": "Web Application Architecture",
+    "description": "An interactive mindmap explaining how a modern web application works from the browser to the database layer.",
+    "contentType": "mindmap"
+  },
+
+  "nodes": [
+    {
+      "id": "root",
+      "data": {
+        "label": "Web Application Architecture",
+        "summary": "A modern web application consists of multiple layers working together to deliver fast, secure, and scalable user experiences. This architecture explains how data flows from the user interface to the database and back."
+      }
+    },
+
+    {
+      "id": "frontend",
+      "data": {
+        "label": "Frontend (Client)",
+        "summary": "The frontend is the user-facing layer of the application. It runs in the browser and is responsible for rendering UI, handling user interactions, and communicating with backend services via APIs."
+      }
+    },
+
+    {
+      "id": "browser",
+      "data": {
+        "label": "Web Browser",
+        "summary": "The browser executes HTML, CSS, and JavaScript. It renders the user interface, manages events like clicks and inputs, and sends HTTP requests to backend servers."
+      }
+    },
+
+    {
+      "id": "ui",
+      "data": {
+        "label": "UI Components",
+        "summary": "UI components are reusable building blocks such as buttons, forms, modals, and dashboards. In frameworks like React, the UI is composed using components to improve maintainability and scalability."
+      }
+    },
+
+    {
+      "id": "state",
+      "data": {
+        "label": "State Management",
+        "summary": "State management handles application data on the client side. Tools like React State, Redux, or Context API help manage UI state, API responses, and user interactions efficiently."
+      }
+    },
+
+    {
+      "id": "backend",
+      "data": {
+        "label": "Backend (Server)",
+        "summary": "The backend handles business logic, authentication, authorization, and communication with databases. It exposes APIs that the frontend consumes."
+      }
+    },
+
+    {
+      "id": "api",
+      "data": {
+        "label": "REST / GraphQL APIs",
+        "summary": "APIs define how the frontend communicates with the backend. REST APIs use HTTP methods, while GraphQL allows flexible queries for fetching exactly the required data."
+      }
+    },
+
+    {
+      "id": "auth",
+      "data": {
+        "label": "Authentication & Authorization",
+        "summary": "This layer ensures that only authenticated users can access protected resources. It includes login, signup, JWT tokens, sessions, and role-based access control."
+      }
+    },
+
+    {
+      "id": "logic",
+      "data": {
+        "label": "Business Logic",
+        "summary": "Business logic contains application rules and workflows. It processes incoming requests, applies validations, and decides how data should be stored or returned."
+      }
+    },
+
+    {
+      "id": "database",
+      "data": {
+        "label": "Database",
+        "summary": "The database stores application data persistently. It can be relational (MySQL, PostgreSQL) or NoSQL (MongoDB) depending on scalability and data structure requirements."
+      }
+    },
+
+    {
+      "id": "sql",
+      "data": {
+        "label": "SQL Databases",
+        "summary": "SQL databases store structured data using tables and relationships. They support complex queries and transactions, making them ideal for consistent data models."
+      }
+    },
+
+    {
+      "id": "nosql",
+      "data": {
+        "label": "NoSQL Databases",
+        "summary": "NoSQL databases store data in flexible formats like documents or key-value pairs. They scale horizontally and are widely used in modern web applications."
+      }
+    },
+
+    {
+      "id": "deployment",
+      "data": {
+        "label": "Deployment & Cloud",
+        "summary": "Deployment involves hosting applications on cloud platforms like AWS, Azure, or Vercel. It includes CI/CD pipelines, scalability, monitoring, and load balancing."
+      }
+    }
+  ],
+
+  "edges": [
+    { "source": "root", "target": "frontend" },
+    { "source": "frontend", "target": "browser" },
+    { "source": "frontend", "target": "ui" },
+    { "source": "frontend", "target": "state" },
+
+    { "source": "root", "target": "backend" },
+    { "source": "backend", "target": "api" },
+    { "source": "backend", "target": "auth" },
+    { "source": "backend", "target": "logic" },
+
+    { "source": "logic", "target": "database" },
+    { "source": "database", "target": "sql" },
+    { "source": "database", "target": "nosql" },
+
+    { "source": "root", "target": "deployment" }
+  ],
+
+  "hierarchy": {
+    "root": ["frontend", "backend", "deployment"],
+    "frontend": ["browser", "ui", "state"],
+    "backend": ["api", "auth", "logic"],
+    "logic": ["database"],
+    "database": ["sql", "nosql"],
+    "browser": [],
+    "ui": [],
+    "state": [],
+    "api": [],
+    "auth": [],
+    "deployment": [],
+    "sql": [],
+    "nosql": []
+  }
+}
